@@ -13,13 +13,12 @@
           :key="pokemon.id"
           :class="`cartao-pokemon`">
 
-          <div class="card">
+         
               <img :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${get_id(pokemon)}.png`" :alt="pokemon.name">
               <div class="text">
                 <h1>{{get_name(pokemon)}}</h1>
                 <span>#{{get_id(pokemon)}}</span>
               </div>
-          </div>
         </div>
         <!-- fim listagem dinâmica -->
 
@@ -73,6 +72,7 @@ export default {
 
 body {
   background: #DCDCDC;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -125,15 +125,17 @@ body {
   box-shadow: 2px 2px 2px rgba(200, 200, 200, 0.77);
 }
 
-.card img {
+.cartao-pokemon img {
   display: block;
-  width: 75%;
-  margin: 10px auto;
+  width: 55%;
+  margin: 0 auto;
 }
 
 .text {
   display: flex;
   justify-content: space-between;
+  padding: 10px;
+  margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
 }
